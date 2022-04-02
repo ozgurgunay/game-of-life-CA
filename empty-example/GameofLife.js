@@ -5,7 +5,7 @@ function make2DArray ( cols, rows){
   }
   return arr;
 }
-//yukarda grid için bir 2Ddizi tanımladık
+//we defined a 2D array for grid
 
 let grid;
 let cols ;
@@ -21,7 +21,7 @@ function setup () {
   for ( let i = 0; i < cols; i++) {
     for ( let j = 0; j < rows; j++) {
       grid[i][j] = floor(random(2));
-      // grid içerisinde yalnızca random(2) deger döndürüyor 0 ve 1 asagıda bu 2 degeri siyah ve beyaz renge cevircez
+      //It returns only random(2) values in the grid, 0 and 1 below change these 2 values to black and white
     }
   }
 }
@@ -34,11 +34,11 @@ function draw () {
       let x = i*resolution;
       let y = j*resolution;
       
-      if(grid[i][j] == 1){  //yukarıda grid içerisi için random yazan kod 
-       // eger karelerin içi 1 olursa siyah renkle dolduruyoruz
+      if(grid[i][j] == 1){  //code that says random for the grid above 
+       // if the inside of squares is 1, we fill it with black color
         fill(255);
-        stroke(0);  //rect in çizgilerinin renkleri için 
-        rect(x, y, resolution-1, resolution-1); //resolution-1 olursa çizgilerin kalınlığı inceliği değişir
+        stroke(0);  //for rect in line colors 
+        rect(x, y, resolution-1, resolution-1); // if it is resolution-1 the thickness of the lines changes.
       }
     }
   }
